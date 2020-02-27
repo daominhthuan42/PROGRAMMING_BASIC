@@ -7,3 +7,5 @@ https://www.amazon.com/Professional-Java-Native-Interfaces-JFace-ebook/dp/B000U0
 https://o7planning.org/vi/10623/huong-dan-lap-trinh-javafx-cho-nguoi-moi-bat-dau
 
 https://teamvietdev.com/
+
+https://creately.com/blog/diagrams/sequence-diagram-tutorial/
