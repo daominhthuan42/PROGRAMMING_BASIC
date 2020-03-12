@@ -84,3 +84,5 @@ Submit your plugin (.jar file) and .7z files as output of this exercise.
 Copy the them to \\rvc-vnas-01\Training\201809SW\OOP\03. Final exercise\00. Design and Coding exercise\01. Output\<YourCode>.
 
 The end!!
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=20&cad=rja&uact=8&ved=2ahUKEwja6ruUw5ToAhWJMN4KHTsFBHgQFjATegQIAxAB&url=http%3A%2F%2Fmath.hws.edu%2Feck%2Fcs124%2Fjavanotes6%2Fsource%2FShapeDraw.java&usg=AOvVaw3feYIGT6gi-urd-ORq0PxY
