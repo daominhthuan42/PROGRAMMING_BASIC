@@ -1,1 +1,69 @@
 
+#define _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h> 
+#include<stdlib.h> 
+#include<string.h>
+
+struct leaf {
+	char data[16]; /* string data */
+	struct leaf *next; /* pointer to the next leaf */
+};
+
+struct leaf *addLeaf(const char*, struct leaf *);
+void printLeaves(struct leaf *p);
+void freeLeaves(struct leaf *p);
+
+int main(void)
+{
+	struct leaf *top; /* top of the leaves */
+	const char *fruits[3] = { "apple", "orange", "banana" };
+	top = NULL;
+	top = addLeaf(fruits[0], top);
+	top = addLeaf(fruits[1], top);
+	top = addLeaf(fruits[2], top);
+	printLeaves(top); /* print elements*/
+	freeLeaves(top); /* delete all elements */
+}
+void printLeaves(struct leaf *pL)
+{
+	while (pL != NULL) {
+		printf("%s\n", pL->data);
+		pL = pL->next;
+	}
+}
+
+struct leaf *addLeaf(char *data, struct leaf *top)
+{
+	struct leaf *pL;
+	pL = (struct leaf*) malloc(sizeof(struct leaf));
+	strcpy(pL->data, data);
+	/* change pointer to the top */
+	pL->next = top; /* Old top is new leaf's next */
+	top = pL;/* New top is new leaf's address */
+	return top;
+}
+void freeLeaves(struct leaf *pL)
+{
+	struct leaf *pLnext;
+	while (pL != NULL) {
+		pLnext = pL->next;
+		free(pL);
+		pL = pLnext;
+	}
+}
+
+
+Regarding the sample program 9, add following function.
+(1) After creating 3 initial data (prepared in program 9),
+insert element 4 after element 1. (element 4 data is "grape")
+[Expand exercise]
+(2) Get “insert number” and “fruit name” by "scanf", and insert the element to the LIST.
+
+Regarding the sample program 9, add following function.
+(1) After create initial 3 data (prepared in program 9),
+remove element 2.
+[Expand exercise]
+(2) Get “remove number” by "scanf", and remove the element from the LIST.
+
+
+
