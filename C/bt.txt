@@ -1,28 +1,31 @@
 
-#define _CRT_SECURE_NO_WARNINGS 
 #include<stdio.h> 
 #include<stdlib.h> 
 #include<string.h>
+#include<conio.h>
+
 
 struct leaf {
 	char data[16]; /* string data */
 	struct leaf *next; /* pointer to the next leaf */
 };
 
-struct leaf *addLeaf(const char*, struct leaf *);
+struct leaf *addLeaf(char*, struct leaf *);
 void printLeaves(struct leaf *p);
 void freeLeaves(struct leaf *p);
 
 int main(void)
 {
 	struct leaf *top; /* top of the leaves */
-	const char *fruits[3] = { "apple", "orange", "banana" };
+	char *fruits[4] = {"apple", "orange", "grapes"  ,"banana"};
 	top = NULL;
 	top = addLeaf(fruits[0], top);
 	top = addLeaf(fruits[1], top);
 	top = addLeaf(fruits[2], top);
+	top = addLeaf(fruits[3], top);
 	printLeaves(top); /* print elements*/
 	freeLeaves(top); /* delete all elements */
+	_getch();
 }
 void printLeaves(struct leaf *pL)
 {
@@ -36,7 +39,7 @@ struct leaf *addLeaf(char *data, struct leaf *top)
 {
 	struct leaf *pL;
 	pL = (struct leaf*) malloc(sizeof(struct leaf));
-	strcpy(pL->data, data);
+	strcpy_s(pL->data, data);
 	/* change pointer to the top */
 	pL->next = top; /* Old top is new leaf's next */
 	top = pL;/* New top is new leaf's address */
@@ -51,7 +54,6 @@ void freeLeaves(struct leaf *pL)
 		pL = pLnext;
 	}
 }
-
 
 Regarding the sample program 9, add following function.
 (1) After creating 3 initial data (prepared in program 9),
