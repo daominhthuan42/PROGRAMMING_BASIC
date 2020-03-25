@@ -14,3 +14,5 @@ https://viblo.asia/p/hoc-regular-expression-va-cuoc-doi-ban-se-bot-kho-updated-v
 
 
 https://phongvu.vn/o-cung-ssd-kingston-240gb-2-5-a400-s1704462.html
+
+https://tiki.vn/ram-may-tinh/c2680
